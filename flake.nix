@@ -28,8 +28,15 @@
       overlays = [
         emacs-overlay.overlays.default
       ];
-      lib = import ./lib { inherit darwin home-manager overlays; };
+      lib = import ./lib { inherit nixpkgs darwin home-manager overlays; };
     in {
+      nixosConfigurations = {
+        charsi = lib.mkNixosSystem {
+          hostname = "charsi";
+          system = "x86_64-linux";
+          username = "erlook";
+        };
+      };
       darwinConfigurations = {
         amalgam = lib.mkDarwinSystem {
           hostname = "amalgam";
