@@ -12,9 +12,9 @@
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages =
-    [ pkgs.vim
-    ];
+  environment.systemPackages = [
+    pkgs.vim
+  ];
 
   environment.shells = [ pkgs.zsh ];
 
@@ -38,8 +38,6 @@
   programs.zsh.enable = true;
 
   programs.gnupg.agent.enable = true;
-
-  services.lorri.enable = true;
 
   system.defaults.dock.autohide = true;
   system.defaults.dock.show-recents = false;

@@ -5,7 +5,7 @@
     ../../apps/emacs
   ];
 
-  home.packages = [];
+  home.packages = [ ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -47,7 +47,7 @@
     name = "JetBrains Mono";
     size = 13;
   };
-  programs.kitty.theme = "Nord";
+  programs.kitty.theme = "Modus Vivendi";
   programs.kitty.settings = {
     window_padding_width = 10;
   };
@@ -65,6 +65,7 @@
   programs.exa.enableAliases = true;
 
   programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   programs.ssh.enable = true;
   programs.ssh.matchBlocks = {
